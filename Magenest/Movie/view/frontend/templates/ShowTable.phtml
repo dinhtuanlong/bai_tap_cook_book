@@ -1,0 +1,6 @@
+<h2>Show table</h2>
+<ul>
+    <?php foreach ($block->getProducts() as $movie): ?>
+        <li><?php echo $movie->getName() ?></li>
+    <?php endforeach; ?>
+</ul>
