@@ -1,6 +1,19 @@
 <h2>Show table</h2>
-<ul>
-    <?php foreach ($block->getProducts() as $movie): ?>
-        <li><?php echo $movie->getName() ?></li>
+<table style="border: 1px solid black;text-align: center;">
+    <tr style="border: 1px solid black;text-align: center;">
+        <th style="border: 1px solid black;text-align: center;">Movie Name</th>
+        <th style="border: 1px solid black;text-align: center;">Description</th>
+        <th style="border: 1px solid black;text-align: center;">Rating</th>
+        <th style="border: 1px solid black;text-align: center;">Director</th>
+        <th style="border: 1px solid black;text-align: center;">Actor</th>
+    </tr>
+    <?php foreach ($block->getMovies() as $movie): ?>
+    <tr style="border: 1px solid black;">
+        <td style="border: 1px solid black;"><?php echo $movie->getMovie() ?></td>
+        <td style="border: 1px solid black;"><?php echo $movie->getDescription() ?></td>
+        <td style="border: 1px solid black;"><?php echo $movie->getRating() ?></td>
+        <td style="border: 1px solid black;"><?php echo $movie->getDirector() ?></td>
+        <td style="border: 1px solid black;"><?php echo $movie->getActor() ?></td>
+    </tr>
     <?php endforeach; ?>
-</ul>
+</table>

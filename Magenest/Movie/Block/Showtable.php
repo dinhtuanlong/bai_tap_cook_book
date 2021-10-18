@@ -3,14 +3,16 @@ namespace Magenest\Movie\Block;
 use Magento\Framework\View\Element\Template;
 class Showtable extends Template
 {
-    private $_movieCollectFactory;
-    public function __construct(Template\Context $context, \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $movieCollectFactory, array $data = [])
+    private $_movieCollectionFactory;
+    public function __construct(Template\Context $context, \Magenest\Movie\Model\ResourceModel\movie\CollectionFactory $movieCollectionFactory, array $data = [])
     {
         parent::__construct($context, $data);
-        $this->movieCollectFactory = $_movieCollectFactory;
+        $this->_movieCollectionFactory = $movieCollectionFactory;
     }
-    public function getMovie() {
-        $collection = $this->_movieCollectFactory->_initSelect();
-        return $collection;
+    public function getMovies() {
+        $movie = $this->_movieCollectionFactory->create();
+        $movie->joinMovie();
+        return $movie;
     }
 }
+

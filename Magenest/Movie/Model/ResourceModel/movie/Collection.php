@@ -14,10 +14,24 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->_init('Magenest\Movie\Model\movie',
             'Magenest\Movie\Model\ResourceModel\movie');
     }
-    protected function _initSelect()
+    public function joinMovie()
     {
-        parent::_initSelect();
-        $this->getSelect()->join(['movie' => $this->_resource->getTable('magenest_movie')], 'magenest_movie.movie_id = magenest_director.movie_id',);
-        return $this;
+        $actorTable = $this->getTable('magenest_actor');
+        $movieactorTable = $this->getTable('magenest_movie_actor');
+        $directorTable = $this->getTable('magenest_director');
+        $result=$this
+            ->addFieldToSelect('name','movie')
+            ->addFieldToSelect('description')
+            ->addFieldToSelect('rating')
+            ->join($directorTable,
+                'main_table.director_id='.$directorTable.'.director_id',
+                ['director' => 'name'])
+            ->join($movieactorTable,
+                'main_table.movie_id='.$movieactorTable.'.movie_id',
+                null)
+            ->join($actorTable,
+                $actorTable.'.actor_id='.$movieactorTable.'.actor_id',
+                ['actor' => 'name']);
+        return $result->getSelect();
     }
 }
