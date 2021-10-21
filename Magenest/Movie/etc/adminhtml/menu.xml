@@ -19,5 +19,39 @@
             action="movie/index/"
             resource="Magenest_Movie::index"
         />
+        <add
+            id="Magenest_Movie::menu"
+            title="Movie"
+            module="Magenest_Movie"
+            sortOrder="41"
+            resource="Magenest_Movie::menu"
+        />
+        <add
+            id="Magenest_Movie::movie_grid"
+            title="Movie grid"
+            module="Magenest_Movie"
+            sortOrder="10"
+            action="movie/movie/"
+            resource="ViMagento_HelloWorld::movie_grid"
+            parent="Magenest_Movie::menu"
+        />
+        <add
+            id="Magenest_Movie::actor_grid"
+            title="Actor grid"
+            module="Magenest_Movie"
+            sortOrder="20"
+            parent="Magenest_Movie::menu"
+            action="movie/actor/"
+            resource="Magenest_Movie::actor_grid"
+        />
+        <add
+            id="Magenest_Movie::director_grid"
+            title="Director grid"
+            module="Magenest_Movie"
+            sortOrder="30"
+            action="movie/director/"
+            resource="ViMagento_HelloWorld::director_grid"
+            parent="Magenest_Movie::menu"
+        />
     </menu>
 </config>

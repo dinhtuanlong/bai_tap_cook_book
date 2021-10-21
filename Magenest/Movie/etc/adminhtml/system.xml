@@ -18,7 +18,7 @@
                 </field>
                 <field id="yes_no_field_abcd" translate="label" type="select"
                        sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Yes/No_Field_abcd</label>
+                    <label><![CDATA[<span>Yes/No_Field_</span><span style="color:red" >abcd</span>]]></label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="custom_select" translate="label" type="select"
@@ -26,17 +26,23 @@
                     <label>Custom Select Field</label>
                     <source_model>Magenest\Movie\Model\Config\Source\Shownot</source_model>
                 </field>
-                <field id="row_movie" translate="label" type="text"
+                <field id="row_movie1" translate="label" type="text"
                        sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Rows in table "Magenest_movie"</label>
+                    <frontend_model>Magenest\Movie\Block\System\Config\Form\Field\MagenestMovie</frontend_model>
                 </field>
                 <field id="row_actor" translate="label" type="text"
                        sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Rows in table "Magenest_actor"</label>
+                    <depends>
+                        <field id="movie/moviepage/custom_select">1</field>
+                    </depends>
+                    <frontend_model>Magenest\Movie\Block\System\Config\Form\Field\MagenestActor</frontend_model>
                 </field>
-                <field id="button" translate="label" type="button" 
+                <field id="button" translate="label" type="button"
                        sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Field</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\System\Config\Button</frontend_model>
                 </field>
             </group>
         </section>
