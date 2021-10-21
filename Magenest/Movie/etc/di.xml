@@ -11,7 +11,7 @@
     <virtualType name="magenestmovie_movie_collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">magenest_movie</argument>
-            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\movie</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Movie</argument>
         </arguments>
     </virtualType>
 

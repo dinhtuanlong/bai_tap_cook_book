@@ -4,7 +4,7 @@ namespace Magenest\Movie\Controller\Adminhtml\Movie;
 
 use Magento\Framework\GraphQl\Exception;
 use Magento\Backend\App\Action;
-use Magenest\Movie\Model\movieFactory;
+use Magenest\Movie\Model\MovieFactory;
 use Magento\Backend\Model\View\Result\RedirectFactory;
 
 class Save extends Action
@@ -18,7 +18,7 @@ class Save extends Action
      */
     public function __construct(
         Action\Context $context,
-        movieFactory $movieFactory
+        MovieFactory $movieFactory
     ) {
         parent::__construct($context);
         $this->movieFactory = $movieFactory;

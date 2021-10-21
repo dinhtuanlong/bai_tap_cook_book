@@ -2,7 +2,7 @@
 
 namespace Magenest\Movie\Model\Config;
 
-use Magenest\Movie\Model\ResourceModel\movie\CollectionFactory;
+use Magenest\Movie\Model\ResourceModel\Movie\CollectionFactory;
 
 class MovieDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {

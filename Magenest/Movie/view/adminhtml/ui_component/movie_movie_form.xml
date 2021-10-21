@@ -75,7 +75,7 @@
                     <item name="dataScope" xsi:type="string">rating</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
-                        <item name="max_text_length" xsi:type="number">2</item>
+                        <item name="max_text_length" xsi:type="number">1</item>
                         <item name="validate-digits" xsi:type="boolean">true</item>
                         <item name="validate-zero-or-greater" xsi:type="boolean">true</item>
                     </item>
