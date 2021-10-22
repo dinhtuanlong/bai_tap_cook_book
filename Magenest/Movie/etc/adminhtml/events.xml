@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="customer_register_change_name" instance="Magenest\Movie\Observer\ChangeName" />
+    </event>
+    <event name="save_movie">
+        <observer name="movie_change_rating" instance="Magenest\Movie\Observer\ChangeRating" />
+    </event>
+    <event name="admin_system_config_changed_section_movie">
+        <observer name="custom_admin_system_config_changed_section_magenest" instance="Magenest\Movie\Observer\ChangePingtoPong"/>
+    </event>
+</config>

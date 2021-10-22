@@ -44,4 +44,8 @@
             <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\director</argument>
         </arguments>
     </virtualType>
+
+    <type name="Magento\Checkout\CustomerData\AbstractItem">
+        <plugin name="Configurable_product_avatar" type="Magenest\Movie\Plugin\Checkout\CustomerData\AbstractItem" sortOrder="2"/>
+    </type>
 </config>
