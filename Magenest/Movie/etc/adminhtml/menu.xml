@@ -27,20 +27,28 @@
             resource="Magenest_Movie::menu"
         />
         <add
+            id="Magenest_Movie::movie_actor_director_grid"
+            title="Movie"
+            module="Magenest_Movie"
+            sortOrder="10"
+            parent="Magenest_Movie::menu"
+            resource="ViMagento_HelloWorld::movie_actor_director_grid"
+        />
+        <add
             id="Magenest_Movie::movie_grid"
             title="Movie grid"
             module="Magenest_Movie"
             sortOrder="10"
             action="movie/movie/"
             resource="ViMagento_HelloWorld::movie_grid"
-            parent="Magenest_Movie::menu"
+            parent="Magenest_Movie::movie_actor_director_grid"
         />
         <add
             id="Magenest_Movie::actor_grid"
             title="Actor grid"
             module="Magenest_Movie"
             sortOrder="20"
-            parent="Magenest_Movie::menu"
+            parent="Magenest_Movie::movie_actor_director_grid"
             action="movie/actor/"
             resource="Magenest_Movie::actor_grid"
         />
@@ -51,7 +59,24 @@
             sortOrder="30"
             action="movie/director/"
             resource="ViMagento_HelloWorld::director_grid"
+            parent="Magenest_Movie::movie_actor_director_grid"
+        />
+        <add
+            id="Magenest_Movie::newsection"
+            title="New section"
+            module="Magenest_Movie"
+            sortOrder="20"
             parent="Magenest_Movie::menu"
+            resource="ViMagento_HelloWorld::newsection"
+        />
+        <add
+            id="Magenest_Movie::newsection1and2"
+            title="Two new sections"
+            module="Magenest_Movie"
+            sortOrder="10"
+            action="movie/newsection/"
+            resource="ViMagento_HelloWorld::newsection1and2"
+            parent="Magenest_Movie::newsection"
         />
     </menu>
 </config>
