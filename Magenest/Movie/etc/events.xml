@@ -9,4 +9,7 @@
     <event name="admin_system_config_changed_section_movie">
         <observer name="custom_admin_system_config_changed_section_magenest" instance="Magenest\Movie\Observer\ChangePingtoPong"/>
     </event>
+    <event name="adminhtml_customer_save_after">
+        <observer name="custom_admin_customer_save_after_magenest" instance="Magenest\Movie\Observer\SaveImg"/>
+    </event>
 </config>

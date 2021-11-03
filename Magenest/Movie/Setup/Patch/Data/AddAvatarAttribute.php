@@ -65,9 +65,9 @@ class AddAvatarAttribute implements DataPatchInterface
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
         $eavSetup->addAttribute('customer', 'avatar_url', [
-            'type' => 'text',
+            'type' => 'varchar',
             'label' => 'Avatar',
-            'input' => 'file',
+            'input' => 'image',
             'backend' => '',
             'default' => '',
             'global' => ScopedAttributeInterface::SCOPE_STORE,
@@ -78,7 +78,7 @@ class AddAvatarAttribute implements DataPatchInterface
             'group' => 'General',
             'sort_order' => 10,
         ]);
-        $attribute = $eavSetup->getEavConfig()->getAttribute('customer', 'avatar')->addData([
+        $attribute = $eavSetup->getEavConfig()->getAttribute('customer', 'avatar_url')->addData([
             'used_in_forms' => [
                 'adminhtml_customer'
             ]
