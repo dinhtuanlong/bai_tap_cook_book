@@ -17,4 +17,3 @@ class Button extends Field
         return '<button onClick="window.location.reload();">Refresh Page</button>';
     }
 }
-?>

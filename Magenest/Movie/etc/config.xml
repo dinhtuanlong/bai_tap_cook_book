@@ -9,5 +9,23 @@
                 <custom_select>1</custom_select>
             </moviepage>
         </movie>
+        <customer_courses>
+            <customer_courses>
+                <Customer_courses_setting>
+                    <item1>
+                        <customer_group>0</customer_group>
+                        <time_course>0</time_course>
+                    </item1>
+                    <item2>
+                        <customer_group>1</customer_group>
+                        <time_course>1</time_course>
+                    </item2>
+                    <item3>
+                        <customer_group>2</customer_group>
+                        <time_course>2</time_course>
+                    </item3>
+                </Customer_courses_setting>
+            </customer_courses>
+        </customer_courses>
     </default>
 </config>

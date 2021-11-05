@@ -1,7 +1,9 @@
 <?php
 namespace Magenest\Movie\Controller\Adminhtml\Index;
+
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
+
 class Index extends \Magento\Backend\App\Action
 {
     protected $resultPageFactory;

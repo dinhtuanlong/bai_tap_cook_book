@@ -194,6 +194,4 @@ class Info extends Template
     {
         return $this->currentCustomer->getCustomerId() ? parent::_toHtml() : '';
     }
-
-
 }

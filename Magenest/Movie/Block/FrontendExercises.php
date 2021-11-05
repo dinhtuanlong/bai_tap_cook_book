@@ -1,5 +1,6 @@
 <?php
 namespace Magenest\Movie\Block;
+
 use Magento\Framework\View\Element\Template;
 
 class FrontendExercises extends Template
@@ -9,10 +10,10 @@ class FrontendExercises extends Template
     public function __construct(
         Template\Context $context,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory
-                         $productCollectionFactory,
-        array $data=[]
-    ){
-        parent::__construct($context,$data);
+        $productCollectionFactory,
+        array $data = []
+    ) {
+        parent::__construct($context, $data);
 
         $this->_procutCollectFactory = $productCollectionFactory;
     }

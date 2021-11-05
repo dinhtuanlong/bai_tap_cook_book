@@ -18,7 +18,7 @@ class ChangePingtoPong implements \Magento\Framework\Event\ObserverInterface
         ScopeConfigInterface $scopeConfig,
         WriterInterface $configWriter,
         TypeListInterface $cacheTypeList
-    ){
+    ) {
         $this->logger = $logger;
         $this->_scopeConfig = $scopeConfig;
         $this->configWriter = $configWriter;
@@ -27,9 +27,9 @@ class ChangePingtoPong implements \Magento\Framework\Event\ObserverInterface
     public function execute(Observer $observer)
     {
         $textField = $observer->getEvent()->getData('changed_paths');
-        if(isset($textField["0"])){
+        if (isset($textField["0"])) {
             $value = $this->_scopeConfig->getValue($textField["0"]);
-            if($value == "Ping"){
+            if ($value == "Ping") {
                 $value = "Pong";
             }
             $this->configWriter->delete($textField["0"]);

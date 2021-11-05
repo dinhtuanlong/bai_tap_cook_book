@@ -17,8 +17,7 @@ class AddAvatarAttribute implements DataPatchInterface
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         CustomerSetupFactory     $eavSetupFactory
-    )
-    {
+    ) {
         $this->eavSetupFactory = $eavSetupFactory;
         $this->moduleDataSetup = $moduleDataSetup;
     }

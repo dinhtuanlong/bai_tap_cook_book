@@ -1,5 +1,6 @@
 <?php
 namespace Magenest\Movie\Model;
+
 class director extends \Magento\Framework\Model\AbstractModel
 {
     const CACHE_TAG = 'magenest_director_director';
@@ -9,6 +10,3 @@ class director extends \Magento\Framework\Model\AbstractModel
         $this->_init('Magenest\Movie\Model\ResourceModel\director');
     }
 }
-
-
-

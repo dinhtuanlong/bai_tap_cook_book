@@ -57,11 +57,11 @@ class OddEven extends Column
             foreach ($dataSource['data']['items'] as &$item) {
                 $html = "<div>";
                 try {
-                    if(($item[$this->getData('name')]%2) != 1){
+                    if (($item[$this->getData('name')]%2) != 1) {
                         $html .= "<button disabled class=\"grid-severity-notice\">Even</button>";
-                    }else if(($item[$this->getData('name')]%2) == 1){
+                    } elseif (($item[$this->getData('name')]%2) == 1) {
                         $html .= "<button disabled class=\"grid-severity-major\">Odd</button>";
-                    }else{
+                    } else {
                         $html .= "Error";
                     }
                 } catch (\Exception $e) {

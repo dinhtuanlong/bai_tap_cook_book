@@ -21,9 +21,9 @@ class Newsection extends Template
         \Magento\Sales\Model\ResourceModel\Order\Invoice\CollectionFactory $invoiceCollectionFactory,
         \Magento\Sales\Model\ResourceModel\Order\Creditmemo\CollectionFactory $creditmemosCollectionFactory,
         \Magento\Framework\Module\FullModuleList $fullModuleList,
-        array $data=[]
-    ){
-        parent::__construct($context,$data);
+        array $data = []
+    ) {
+        parent::__construct($context, $data);
 
         $this->customerFactory = $customerFactory;
         $this->productCollectionFactory = $productCollectionFactory;
@@ -33,34 +33,40 @@ class Newsection extends Template
         $this->fullModuleList = $fullModuleList;
     }
 
-    public function getCustomerNumber(){
+    public function getCustomerNumber()
+    {
         $customerCollection = $this->customerFactory->create();
         return $this->getNumber($customerCollection);
     }
 
-    public function getProductsNumber(){
+    public function getProductsNumber()
+    {
         $productCollection = $this->productCollectionFactory->create();
         return $this->getNumber($productCollection);
     }
 
-    public function getOrderNumber(){
+    public function getOrderNumber()
+    {
         $orderCollection = $this->orderCollectionFactory->create();
         return $this->getNumber($orderCollection);
     }
 
-    public function getInvoiceNumber(){
+    public function getInvoiceNumber()
+    {
         $invoiceCollection = $this->invoiceCollectionFactory->create();
         return $this->getNumber($invoiceCollection);
     }
 
-    public function getCreditmemosNumber(){
+    public function getCreditmemosNumber()
+    {
         $creditmemosCollection = $this->creditmemosCollectionFactory->create();
         return $this->getNumber($creditmemosCollection);
     }
 
-    public function getNumber($collection){
+    public function getNumber($collection)
+    {
         $count = 0;
-        foreach($collection as $item){
+        foreach ($collection as $item) {
             $count++;
         }
         return $count;
@@ -70,7 +76,7 @@ class Newsection extends Template
     {
         $allModules = $this->fullModuleList->getAll();
         $count = 0;
-        foreach($allModules as $item){
+        foreach ($allModules as $item) {
             //echo $item["name"]."<br>";
             $count++;
         }
@@ -81,9 +87,9 @@ class Newsection extends Template
     {
         $allModules = $this->fullModuleList->getAll();
         $count = 0;
-        foreach($allModules as $item){
-            $array = explode("_",$item["name"]);
-            if($array[0] == "Magento"){
+        foreach ($allModules as $item) {
+            $array = explode("_", $item["name"]);
+            if ($array[0] == "Magento") {
                 $count++;
             }
             //echo $item["name"]."<br>";
@@ -95,9 +101,9 @@ class Newsection extends Template
     {
         $allModules = $this->fullModuleList->getAll();
         $count = 0;
-        foreach($allModules as $item){
-            $array = explode("_",$item["name"]);
-            if($array[0] != "Magento"){
+        foreach ($allModules as $item) {
+            $array = explode("_", $item["name"]);
+            if ($array[0] != "Magento") {
                 $count++;
             }
             //echo $item["name"]."<br>";

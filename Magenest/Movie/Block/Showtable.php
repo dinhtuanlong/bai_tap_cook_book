@@ -1,6 +1,8 @@
 <?php
 namespace Magenest\Movie\Block;
+
 use Magento\Framework\View\Element\Template;
+
 class Showtable extends Template
 {
     private $_movieCollectionFactory;
@@ -9,10 +11,10 @@ class Showtable extends Template
         parent::__construct($context, $data);
         $this->_movieCollectionFactory = $movieCollectionFactory;
     }
-    public function getMovies() {
+    public function getMovies()
+    {
         $movie = $this->_movieCollectionFactory->create();
         $movie->joinMovie();
         return $movie;
     }
 }
-

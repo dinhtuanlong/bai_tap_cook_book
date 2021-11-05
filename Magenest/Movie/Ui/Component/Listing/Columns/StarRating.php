@@ -56,11 +56,12 @@ class StarRating extends Column
                 <style> .yellow-color {
                         color:yellow;
                     } </style><div>";
-                for($i = 0;$i < $item[$this->getData('name')];$i++){
+                for ($i = 0; $i < $item[$this->getData('name')]; $i++) {
                     $html .= "<i class='fa fa-star yellow-color'></i>";
                 };
-                for($i = 0;$i < (5 - $item[$this->getData('name')]);$i++)
+                for ($i = 0; $i < (5 - $item[$this->getData('name')]); $i++) {
                     $html .= "<i class='far fa-star yellow-color'></i>";
+                }
                 $item[$this->getData('name')] = $html;
             }
         }

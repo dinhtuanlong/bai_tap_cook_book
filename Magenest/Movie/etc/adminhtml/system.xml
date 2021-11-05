@@ -46,5 +46,20 @@
                 </field>
             </group>
         </section>
+        <section id="customer_courses" translate="label" type="text" sortOrder="10"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Customer Courses</label>
+            <tab>magenest</tab>
+            <resource>Magenest_Movie::config_movie</resource>
+            <group id="customer_courses" translate="label" type="text" sortOrder="1"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer courses settings</label>
+                <field id="Customer_courses_setting" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Time</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\Form\Field\CustomerCourses</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
     </system>
 </config>

@@ -16,8 +16,7 @@ class Save extends Action
         Action\Context $context,
         MovieFactory $movieFactory,
         RedirectFactory $redirectFactory
-    )
-    {
+    ) {
         parent::__construct($context);
         $this->movieFactory = $movieFactory;
         $this->resultRedirect = $redirectFactory;
@@ -34,7 +33,7 @@ class Save extends Action
 //            'description' => $data["description"],
 //        ];
 
-        if(!isset($data["name"])){
+        if (!isset($data["name"])) {
             $this->_redirect('movie/movie/index');
         }
 
@@ -46,13 +45,13 @@ class Save extends Action
         ];
 
         $movie = $this->movieFactory->create();
-        if($id){
+        if ($id) {
             $movie->load($id);
         }
 
         try {
             $movie->addData($newData);
-            $this->_eventManager->dispatch('save_movie',['movie' => $movie]);
+            $this->_eventManager->dispatch('save_movie', ['movie' => $movie]);
             $movie->save();
             return $this->resultRedirect->create()->setPath('movie/movie/index');
         } catch (\Exception $e) {

@@ -1,5 +1,6 @@
 <?php
 namespace Magenest\Movie\Model;
+
 class actor extends \Magento\Framework\Model\AbstractModel
 {
     const CACHE_TAG = 'magenest_actor_actor';
@@ -9,6 +10,3 @@ class actor extends \Magento\Framework\Model\AbstractModel
         $this->_init('Magenest\Movie\Model\ResourceModel\actor');
     }
 }
-
-
-

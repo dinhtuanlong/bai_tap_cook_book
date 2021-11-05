@@ -21,7 +21,7 @@ class ChangeName implements ObserverInterface
         CustomerRepositoryInterface $customerRepository,
         CustomerFactory $customerFactory,
         RequestInterface $request
-    ){
+    ) {
         $this->logger = $logger;
         $this->customerRepository = $customerRepository;
         $this->request = $request;
@@ -33,7 +33,7 @@ class ChangeName implements ObserverInterface
         $customer = $observer->getEvent()->getData('customer');
         $customer->setFirstName("Magenest");
         $this->customerRepository->save($customer);
-        $this->logger->debug($customer->getFirstName());
-        $this->logger->debug($customer->getId());
+        //$this->logger->debug($customer->getFirstName());
+        //$this->logger->debug($customer->getId());
     }
 }

@@ -1,5 +1,6 @@
 <?php
 namespace Magenest\Movie\Model\Config\Source;
+
 class Shownot implements \Magento\Framework\Option\ArrayInterface
 {
     public function toOptionArray()

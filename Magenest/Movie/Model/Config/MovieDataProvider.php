@@ -16,8 +16,7 @@ class MovieDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         CollectionFactory $collectionFactory,
         array $meta = [],
         array $data = []
-    )
-    {
+    ) {
         $this->collection = $collectionFactory->create();
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
